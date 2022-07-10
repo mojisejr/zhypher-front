@@ -1,0 +1,13 @@
+.home-page-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 360px) {
+  .home-page-container {
+    font-size: 0.8rem;
+    width: 80vw;
+    height: 100%;
+  }
+}

@@ -1,0 +1,27 @@
+@media only screen and (min-width: 360px) {
+  .main-title-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .main-title {
+    font-size: 1rem;
+    padding: 3px;
+    line-height: 2rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    border-width: 0.15rem;
+    border-color: #89e9f2;
+    border-top-style: dashed;
+    border-bottom-style: dashed;
+    border-left-style: dotted;
+    border-right-style: dotted;
+  }
+  .sub-title-container {
+    margin-top: 1rem;
+    font-size: 0.6rem;
+  }
+  .sub-title-1 {
+    margin-bottom: 0.8rem;
+  }
+}
