@@ -1,0 +1,12 @@
+<div>
+  <div>
+    <button (click)="setToggle()">
+      {{ toggle ? "off" : "on" }}
+      <fa-icon *ngIf="toggle" [icon]="faMute"></fa-icon>
+      <fa-icon *ngIf="!toggle" [icon]="faVolume"></fa-icon>
+    </button>
+  </div>
+  <audio class="hidden" #bgSound>
+    <source src="assets/bg-sound.wav" type="audio/wav" />
+  </audio>
+</div>
