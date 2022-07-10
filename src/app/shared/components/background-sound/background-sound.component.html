@@ -1,9 +1,17 @@
 <div>
   <div>
-    <button (click)="setToggle()">
+    <button class="flex items-center gap-2" (click)="setToggle()">
       {{ toggle ? "off" : "on" }}
-      <fa-icon *ngIf="toggle" [icon]="faMute"></fa-icon>
-      <fa-icon *ngIf="!toggle" [icon]="faVolume"></fa-icon>
+      <fa-icon
+        class="flex align-middle"
+        *ngIf="toggle"
+        [icon]="faMute"
+      ></fa-icon>
+      <fa-icon
+        class="flex align-middle"
+        *ngIf="!toggle"
+        [icon]="faVolume"
+      ></fa-icon>
     </button>
   </div>
   <audio class="hidden" #bgSound>

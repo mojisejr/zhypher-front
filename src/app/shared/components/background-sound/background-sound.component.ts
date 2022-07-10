@@ -16,9 +16,11 @@ import { faVolumeMute, faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
 export class BackgroundSoundComponent implements AfterViewInit {
   faVolume = faVolumeHigh;
   faMute = faVolumeMute;
+
   @ViewChild('bgSound', { static: false })
   audioEl: ElementRef<HTMLAudioElement>;
   @Input('playToggle') toggle: boolean;
+
   constructor() {
     this.toggle = true;
     this.audioEl = {} as ElementRef;
