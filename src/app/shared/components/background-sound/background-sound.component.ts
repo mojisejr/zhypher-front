@@ -4,6 +4,7 @@ import {
   AfterViewInit,
   ViewChild,
   ElementRef,
+  OnInit,
 } from '@angular/core';
 
 import { faVolumeMute, faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
@@ -22,14 +23,15 @@ export class BackgroundSoundComponent implements AfterViewInit {
   @Input('playToggle') toggle: boolean;
 
   constructor() {
-    this.toggle = true;
+    this.toggle = false;
     this.audioEl = {} as ElementRef;
   }
 
   async ngAfterViewInit(): Promise<void> {
     this.audioEl.nativeElement.controls = true;
     this.audioEl.nativeElement.loop = true;
-    await this.onToggle();
+    this.audioEl.nativeElement.autoplay = true;
+    await this.audioEl.nativeElement.play();
   }
 
   async setToggle() {
